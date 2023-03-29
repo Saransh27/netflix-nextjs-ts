@@ -1,10 +1,32 @@
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Image from 'next/image';
-import styles from '../styles/Home.module.css';
+import React from 'react';
+import { NextPageContext } from 'next';
+import { getSession } from 'next-auth/react';
 
-const Home: NextPage = () => {
-  return <div className='text-2xl text-green-500'>netflix clone</div>;
+import Navbar from '../components/Navbar';
+
+export async function getServerSideProps(context: NextPageContext) {
+  const session = await getSession(context);
+
+  if (!session) {
+    return {
+      redirect: {
+        destination: '/auth',
+        permanent: false,
+      },
+    };
+  }
+
+  return {
+    props: {},
+  };
+}
+
+const Home = () => {
+  return (
+    <>
+      <Navbar />
+    </>
+  );
 };
 
 export default Home;
