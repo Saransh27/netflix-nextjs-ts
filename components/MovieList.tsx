@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { MovieInterface } from '@/types';
+import { MovieInterface } from '../types';
 import MovieCard from './MovieCard';
 import { isEmpty } from 'lodash';
 

@@ -1,6 +1,5 @@
 import React, { useCallback } from 'react';
 import { useRouter } from 'next/router';
-import { ChevronDownIcon } from '@heroicons/react/24/outline';
 import { PlayIcon } from '@heroicons/react/24/solid';
 
 import { MovieInterface } from '../types';
