@@ -8,7 +8,7 @@ import { useRouter } from 'next/router';
 import Input from '../components/Input';
 
 const Auth = () => {
-  const router = useRouter('');
+  const router = useRouter();
   const [email, setEmail] = useState('');
   const [name, setName] = useState('');
   const [password, setPassword] = useState('');
